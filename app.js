@@ -18,8 +18,6 @@ const weather = require('/.weather.js')
 
 
 
-
-
 router.get('/dir/:search?', function(req, res){
     if(condition){
         res.json({
