@@ -4,10 +4,13 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
-app.use(express.static('public'))
-
 app.listen(port, function(){
     console.log("Up and running")
+})
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(_dirname, 'index.html'))
+    console.log('home page')
 })
 
 
@@ -31,8 +34,5 @@ app.use('/', router)
 
 
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(_dirname, 'index.html'))
-    console.log('home page')
-})
+
 */
